@@ -1,10 +1,16 @@
 #include<stdio.h>
 #include <stdio.h>
 #include "lexer.h"
+#include "io.h"
 
 int main(void)
 {
-    token_t *tokens = parse("2+2");
+    char *source = read_file("../examples/operations.qk");
 
-    printf("%s\n", tokens->next->lexeme);
+    token_t *tokens = parse(source);
+
+    while (tokens != NULL) {
+        printf("%s\n", tokens->lexeme);
+        tokens = tokens->next;
+    }
 }

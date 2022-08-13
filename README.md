@@ -16,3 +16,19 @@ fn main() -> i32 {
     ret 0;
 }
 ```
+
+## Building
+
+To build quark use the following commands:
+
+```
+mkdir build && cd build
+../configure
+make
+```
+
+if you also want to install quark on your machine you can use `make install` with root access (using sudo for example)
+
+## Copying
+
+See [COPYING](COPYING)
